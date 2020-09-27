@@ -1,5 +1,5 @@
 {
-  "name": "Portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/svalenzuela1/Portfolio/issues"
   },
-  "homepage": "https://github.com/svalenzuela1/Portfolio#readme"
+  "homepage": "https://github.com/svalenzuela1/Portfolio#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  }
 }

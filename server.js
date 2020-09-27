@@ -7,8 +7,16 @@ const morgan = require('morgan')
 
 
 const PORT = process = process.env.PORT; //assign port from .env file
-const NODE_ENV = process.env.NODE_ENV
+//const NODE_ENV = process.env.NODE_ENV
 
 
+//this should show up in localhost 
+app.get('/', (req, res) => {
+    res.send('it woooooorks')
+})
+
+app.listen(PORT, () => {
+    console.log(`This should show up in VSCODE terminal. Listening on ${PORT}`)
+})
 
 
