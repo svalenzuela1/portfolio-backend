@@ -10,6 +10,6 @@ router.post('/', create)
 
 router.put('/:id', update)
 
-router.destroy('/:id', destroy)
+router.delete('/:id', destroy)
 
-//module.exports = router
+module.exports = router

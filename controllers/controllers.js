@@ -22,8 +22,7 @@ const create = async(req, res) => {
     try {
         
         const createModel = await projectModel.create(req.body)
-        const indexModel = await projectModel.find({})
-        res.status(200).json(indexModel)
+        res.status(202).json(createModel)
 
     } catch(error){
 
@@ -37,8 +36,7 @@ const update = async (req, res) => {
     try{
 
         const updateModel = await projectModel.findByIdAndUpdate(req.params.id, req.body, {new: true})
-        const indexModel = await projectModel.find({})
-        res.status(200).json(indexModel)
+        res.status(200).json(updateModel)
 
     }catch(error){
 
@@ -52,8 +50,7 @@ const destroy = async(req, res) => {
     try{
 
         const destroyModel = await projectModel.findByIdAndDelete(req.params.id)
-        const indexModel = await projectModel.find({})
-        res.status(200).json(indexModel)
+        res.status(200).json(destroyModel)
 
     }catch(error){
 

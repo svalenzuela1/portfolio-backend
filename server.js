@@ -7,7 +7,7 @@ const cors = require('cors')
 const morgan = require('morgan')
 
 //router 
-const router = express.Router()
+const router = require('./routes/routes.js')
 
 // a global variable to use for other function routes 
 const PORT = process.env.PORT; //assign port from .env file
@@ -52,9 +52,14 @@ app.use('/', router)
 
 
 //this should show up in localhost 
-app.get('/', (req, res) => {
-    res.send('Hellloooo localhost')
-})
+// app.get('/', (req, res) => {
+//     res.send('Hellloooo localhost')
+// })
+
+//test this route
+// app.post('/', (req, res) => {
+//     res.send('maybe this will work?')
+// })
 
 app.listen(PORT, () => {
     console.log(`This should show up in VSCODE terminal. Listening on ${PORT}`)
