@@ -10,11 +10,11 @@ const morgan = require('morgan')
 const router = express.Router()
 
 // a global variable to use for other function routes 
-const PORT = process = process.env.PORT; //assign port from .env file
-//const NODE_ENV = process.env.NODE_ENV
+const PORT = process.env.PORT; //assign port from .env file
+const NODE_ENV = process.env.NODE_ENV
 
 //for mongo database
-//const mongoURI = process.env.mongoURI + "portfolioBackend";
+const mongoURI = process.env.mongoURI + "portfolioBackend";
 
 //mongoose connection
 const db = mongoose.connection
@@ -24,9 +24,9 @@ const mongoConfig = {
 }
 
 //connection to Mongo 
-//mongoose.connect(mongoURI, mongoConfig, () => {
-  //  console.log("mongo is wooooorking")
-//})
+mongoose.connect(mongoURI, mongoConfig, () => {
+    console.log("mongo is wooooorking")
+})
 
 //WHITELIST 
 const whiteList = ["http:localhost:3000/"]
