@@ -5,7 +5,7 @@ const app = express()
 const cors = require('cors')
 const morgan = require('morgan')
 
-
+// a global variable to use for other function routes 
 const PORT = process = process.env.PORT; //assign port from .env file
 //const NODE_ENV = process.env.NODE_ENV
 
