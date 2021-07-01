@@ -5,8 +5,8 @@ const projectModel = require('../models/schemas.js')
 const index = async (req, res) => {
     
     try {
-
-        const indexModel = await projectModel.find({})
+        const indexModel = '{ "message": "Hello from the controller" }';
+        //const indexModel = await projectModel.find({})
         res.status(200).json(indexModel)
 
     } catch(error){

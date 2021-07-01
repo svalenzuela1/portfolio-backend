@@ -1,0 +1,8 @@
+### get root
+
+GET http://localhost:3000
+
+
+### Get all portfolios
+
+GET http://localhost:3000/api/portfolio

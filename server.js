@@ -48,18 +48,14 @@ app.use(morgan('dev'))
 app.use(express.static('public'))
 
 //route to URL
-app.use('/', router)
-
+//app.use('/', router)
+require('./routes/routes')(app);
 
 //this should show up in localhost 
-// app.get('/', (req, res) => {
-//     res.send('Hellloooo localhost')
-// })
+app.get('/', (req, res) => {
+    res.send('Hellloooo localhost')
+})
 
-//test this route
-// app.post('/', (req, res) => {
-//     res.send('maybe this will work?')
-// })
 
 app.listen(PORT, () => {
     console.log(`This should show up in VSCODE terminal. Listening on ${PORT}`)
