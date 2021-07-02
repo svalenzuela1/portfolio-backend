@@ -8,13 +8,12 @@ const projectSchema = new Schema({
     title: {type: String}, 
     description: {type: String},
     imageURL: {type: String}, 
-    projectURL: {type: String}
-
+    projectURL: {type: String},
+    githubURL: {type: String}
 })
 
 const projectModel = model('Project', projectSchema); 
 
 //exporting the schema from above 
-
 module.exports = projectModel
 
